@@ -45,7 +45,14 @@
             </li>
 
             <li>
-                <a href="index.html" class="waves-effect">
+                <a href="{{route('shop.index')}}" class="waves-effect">
+                    <i class=" ri-parent-fill"></i><span class="badge rounded-pill bg-success float-end">99+</span>
+                    <span>Pet Shop</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{route('hewan.index')}}" class="waves-effect">
                     <i class="ri-bear-smile-fill"></i><span class="badge rounded-pill bg-success float-end">10</span>
                     <span>Animal</span>
                 </a>

@@ -25,5 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 // create user
 Route::resource('user','UserController');
 Route::resource('pelanggan','PelangganController');
+Route::resource('hewan','HewanController');
+Route::resource('shop','ShopController');
 
 ?>

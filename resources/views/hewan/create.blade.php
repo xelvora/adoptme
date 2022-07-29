@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('title')
-Pelanggan
+Hewan
 @endsection
 
 <!-- ini untuk isi home -->
@@ -14,32 +14,31 @@ Pelanggan
 
                                 <div class="card">
                                         <div class="card-body">
-                                        @include('alert.error')
-                                        <h4 class="card-title">Add Pelanggan</h4>
+                                        <h4 class="card-title">Add Hewan</h4>
 
 
-                                        <form class="custom-validation" method="POST" action="{{ route('pelanggan.store') }}" novalidate="">
+                                        <form class="custom-validation" method="POST" action="{{ route('hewan.store') }}" novalidate="">
                                             @csrf
                                             <div class="mb-3">
-                                                <label>Name</label>
-                                                <input type="text" name="nama" class="form-control" required="" placeholder="Silahkan input nama">
+                                                <label>Jenis Hewan</label>
+                                                <input type="text" name="jenis" class="form-control" required="" placeholder="Silahkan input Jenis Hewan">
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>Alamat</label>
-                                                <input type="text" name="alamat" class="form-control" required="" placeholder="Silahkan input alamat">
+                                                <label>Ras</label>
+                                                <input type="text" name="ras" class="form-control" required="" placeholder="Silahkan input ras">
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>E-Mail</label>
+                                                <label>Jenis Kelamin</label>
                                                 <div>
-                                                    <input type="email" name="email" class="form-control" required="" parsley-type="email" placeholder="Silahkan masukan email yang benar">
+                                                    <input type="text" name="jenis" class="form-control" required="" placeholder="Silahkan masukan jenis kelamin">
                                                 </div>
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>No. Telpon</label>
-                                                <input type="text" name="telpon" class="form-control" required="" placeholder="Silahkan input nama">
+                                                <label>Umur</label>
+                                                <input type="text" name="umur" class="form-control" required="" placeholder="Silahkan input umur">
                                             </div>
 
 
