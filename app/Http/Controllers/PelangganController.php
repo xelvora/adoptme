@@ -81,7 +81,7 @@ class PelangganController extends Controller
     $validasi = Validator::make($data,[
             'nama'=>'required|max:255',
             'alamat'=>'required|max:255',
-            'email'=>'required|email|max:255|unique:pelanggans',
+            'email'=>'required|email|max:255',
             //'username'=>'required|max:100|unique:users,username,'.$id,
             'telpon'=>'required|max:255'
         ]);
