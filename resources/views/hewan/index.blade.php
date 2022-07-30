@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('title')
-hewan
+Animal List
 @endsection
 
 <!-- ini untuk isi home -->
@@ -12,7 +12,7 @@ hewan
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0">hewan</h4>
+                                    <h4 class="mb-sm-0">Animal List</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
@@ -33,17 +33,17 @@ hewan
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title">Tabel hewan</h4>
+                                        <h4 class="card-title">Animal List</h4>
 
                                         <div class="table-responsive">
                                             <table class="table table-editable table-nowrap align-middle table-edits">
                                                 <thead>
                                                     <tr style="cursor: pointer;">
                                                         <th>Id</th>
-                                                        <th>Jenis Hewan</th>
-                                                        <th>Ras</th>
-                                                        <th>Jenis</th>
-                                                        <th>Umur</th>
+                                                        <th>Type of Animal</th>
+                                                        <th>Race of Animal</th>
+                                                        <th>Variety of Animal</th>
+                                                        <th>Age</th>
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
@@ -57,7 +57,7 @@ hewan
                         <td>{{ $row->umur}}</td>
 
                         <td>
-                        <form method="post" action="{{ route('hewan.destroy',[$row->id]) }}" onsubmit="return confirm('Apakah anda yakin akan menghapus, {{$row->name}}?')">
+                        <form method="post" action="{{ route('hewan.destroy',[$row->id]) }}" onsubmit="return confirm('Are you sure to delete, {{$row->name}}?')">
                                 @csrf
                             {{ method_field('DELETE') }}
                             <button type="submit" href="{{ route('logout') }}" class="btn btn-outline-secondary btn-sm edit">

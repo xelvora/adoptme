@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('title')
-Data Hewan
+Animal List
 @endsection
 
 <!-- ini untuk isi home -->
@@ -12,11 +12,11 @@ Data Hewan
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0">Data Hewan</h4>
+                                    <h4 class="mb-sm-0">Animal List</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Animal List Table</a></li>
 
                                         </ol>
                                     </div>
@@ -31,37 +31,37 @@ Data Hewan
                                 <div class="card">
                                     <div class="card-body">
 
-                                        <h4 class="card-title">Tabel Hewan</h4>
+                                        <h4 class="card-title">Animal List Table</h4>
 
                                         <div class="table-responsive">
                                             <table class="table table-editable table-nowrap align-middle table-edits">
                                             <tr>
-                       <td>Kode Hewan/td>
+                       <td>Animal Id</td>
 
                        <td>{{ $hewan->id }}</td>
                    </tr>
                    <tr>
-                       <td>Jenis Hewan</td>
+                       <td>Type of Animal</td>
 
                        <td>{{ $hewan->jenishewan }}</td>
                    </tr>
                    <tr>
-                       <td>Ras</td>
+                       <td>Race of Animal</td>
 
                        <td>{{ $hewan->ras }}</td>
                    </tr>
                    <tr>
-                       <td>Jenis Kelamin</td>
+                       <td>Variety of Animal</td>
 
                        <td>{{ $hewan->jenis }}</td>
                    </tr>
                    <tr>
-                       <td>Umur</td>
+                       <td>Age</td>
 
                        <td>{{ $hewan->umur }}</td>
                    </tr>
                                             </table>
-                                            <a class="btn btn-primary waves-effect waves-light" href="/pelanggan" role="button">Kembali</a>
+                                            <a class="btn btn-primary waves-effect waves-light" href="/hewan" role="button">Back</a>
                                         </div>
                                     </div>
                                 </div>

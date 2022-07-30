@@ -1,4 +1,4 @@
-<div class="vertical-menu">
+<div class="vertical-menu" style="background-color: #D6DBDF;  ">
 
 <div data-simplebar class="h-100">
 
@@ -39,21 +39,21 @@
 
             <li>
                 <a href="{{route('pelanggan.index')}}" class="waves-effect">
-                    <i class=" ri-parent-fill"></i><span class="badge rounded-pill bg-success float-end">99+</span>
+                    <i class=" ri-parent-fill"></i>
                     <span>User</span>
                 </a>
             </li>
 
             <li>
                 <a href="{{route('shop.index')}}" class="waves-effect">
-                    <i class=" ri-parent-fill"></i><span class="badge rounded-pill bg-success float-end">99+</span>
+                    <i class=" ri-parent-fill"></i>
                     <span>Pet Shop</span>
                 </a>
             </li>
 
             <li>
                 <a href="{{route('hewan.index')}}" class="waves-effect">
-                    <i class="ri-bear-smile-fill"></i><span class="badge rounded-pill bg-success float-end">10</span>
+                    <i class="ri-bear-smile-fill"></i>
                     <span>Animal</span>
                 </a>
             </li>

@@ -42,7 +42,7 @@ class PelangganController extends Controller
             return redirect()->route('pelanggan.create')->withInput()->withErrors($validasi);
         }
 
-        pelanggan::create($data);
+        Pelanggan::create($data);
         return redirect()->route('pelanggan.index');
     }//end method
 

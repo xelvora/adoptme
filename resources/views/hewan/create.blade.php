@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('title')
-Hewan
+Animal List
 @endsection
 
 <!-- ini untuk isi home -->
@@ -14,30 +14,30 @@ Hewan
 
                                 <div class="card">
                                         <div class="card-body">
-                                        <h4 class="card-title">Add Hewan</h4>
+                                        <h4 class="card-title">Add Animal List</h4>
 
 
                                         <form class="custom-validation" method="POST" action="{{ route('hewan.store') }}" novalidate="">
                                             @csrf
                                             <div class="mb-3">
-                                                <label>Jenis Hewan</label>
+                                                <label>Type of Animal</label>
                                                 <input type="text" name="jenishewan" class="form-control" required="" placeholder="Silahkan input Jenis Hewan">
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>Ras</label>
+                                                <label>Race of Animal</label>
                                                 <input type="text" name="ras" class="form-control" required="" placeholder="Silahkan input ras">
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>Jenis Kelamin</label>
+                                                <label>Variety of Animal</label>
                                                 <div>
                                                     <input type="text" name="jenis" class="form-control" required="" placeholder="Silahkan masukan jenis kelamin">
                                                 </div>
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>Umur</label>
+                                                <label>Age of Animal</label>
                                                 <input type="text" name="umur" class="form-control" required="" placeholder="Silahkan input umur">
                                             </div>
 
@@ -45,11 +45,9 @@ Hewan
                                             <div class="mb-0">
                                                 <div>
                                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
-                                                        Tambah
+                                                        Add
                                                     </button>
-                                                    <button type="reset" class="btn btn-secondary waves-effect">
-                                                        Cancel
-                                                    </button>
+                                                    
                                                 </div>
                                             </div>
                                         </form>

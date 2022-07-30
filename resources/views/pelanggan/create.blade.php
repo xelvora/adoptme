@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('title')
-Pelanggan
+Add User
 @endsection
 
 <!-- ini untuk isi home -->
@@ -15,19 +15,19 @@ Pelanggan
                                 <div class="card">
                                         <div class="card-body">
                                         @include('alert.error')
-                                        <h4 class="card-title">Add Pelanggan</h4>
+                                        <h4 class="card-title">Add User</h4>
 
 
                                         <form class="custom-validation" method="POST" action="{{ route('pelanggan.store') }}" novalidate="">
                                             @csrf
                                             <div class="mb-3">
-                                                <label>Name</label>
+                                                <label>Username</label>
                                                 <input type="text" name="nama" class="form-control" required="" placeholder="Silahkan input nama">
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>Alamat</label>
-                                                <input type="text" name="alamat" class="form-control" required="" placeholder="Silahkan input alamat">
+                                                <label>Address</label>
+                                                <textarea type="text" name="alamat" class="form-control" required="" placeholder="Silahkan input alamat"></textarea>
                                             </div>
 
                                             <div class="mb-3">
@@ -38,18 +38,15 @@ Pelanggan
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>No. Telpon</label>
+                                                <label>Phone number</label>
                                                 <input type="text" name="telpon" class="form-control" required="" placeholder="Silahkan input nama">
                                             </div>
 
-                                        </form>
+
                                             <div class="mb-0">
                                                 <div>
                                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
-                                                        Tambah
-                                                    </button>
-                                                    <button type="reset" class="btn btn-secondary waves-effect">
-                                                        Cancel
+                                                        Add
                                                     </button>
                                                 </div>
                                             </div>

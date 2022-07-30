@@ -52,7 +52,7 @@ Admin
                         <td>{{ $row->name }}</td>
                         <td>{{ $row->email }}</td>
                         <td>
-                        <form method="post" action="{{ route('user.destroy',[$row->id]) }}" onsubmit="return confirm('Apakah anda yakin akan menghapus, {{$row->name}}?')">
+                        <form method="post" action="{{ route('user.destroy',[$row->id]) }}" onsubmit="return confirm('Are you sure to delete, {{$row->name}}?')">
                                 @csrf
                             {{ method_field('DELETE') }}
                             <button type="submit" href="{{ route('logout') }}" class="btn btn-outline-secondary btn-sm edit">

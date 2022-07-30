@@ -45,9 +45,6 @@ Edit Admin
                                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
                                                        Edit
                                                     </button>
-                                                    <button type="reset" class="btn btn-secondary waves-effect">
-                                                        Cancel
-                                                    </button>
                                                 </div>
                                             </div>
                                         </form>

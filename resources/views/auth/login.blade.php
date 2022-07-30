@@ -2,9 +2,9 @@
 <html lang="en">
 
     <head>
-        
+
         <meta charset="utf-8" />
-        <title>Register | Adoptme - Find your pet here</title>
+        <title>Login | Adoptme - Find your pet here</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesdesign" name="author" />
@@ -30,7 +30,7 @@
             <div class="container-fluid p-0">
                 <div class="card">
                     <div class="card-body">
-    
+
                             <section class="signup">
             <div class="container">
                 <div class="signup-content">
@@ -53,12 +53,13 @@
                                 <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                             </div>
                             <div class="form-group form-button">
-                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Login"/>
                             </div>
                         </form>
                     </div>
                     <div class="signup-image">
                         <figure><img src="{{asset('backend/assets/images/logo.png')}}" alt="sing up image"></figure>
+                        <a href="{{ route('register') }}" class="signup-image-link">Create an Account</a>
                     </div>
                 </div>
             </div>
@@ -74,9 +75,9 @@
             <!-- end container -->
         </div>
         <!-- end -->
-        
 
-        
+
+
 
     </body>
 </html>

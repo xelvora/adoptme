@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('title')
-Edit Pelanggan
+User Edit
 @endsection
 
 <!-- ini untuk isi home -->
@@ -14,7 +14,7 @@ Edit Pelanggan
 
                                 <div class="card">
 <div class="card-body">
-                                        <h4 class="card-title">Edit Pelanggan</h4>
+                                        <h4 class="card-title">User Edit</h4>
 
 
                                         <form class="custom-validation" method="POST" action="{{ route('pelanggan.update',[$pelanggan->id]) }}" novalidate="">
@@ -27,8 +27,8 @@ Edit Pelanggan
 
                                             
                                             <div class="mb-3">
-                                                <label>Alamat</label>
-                                                <input type="text" name="alamat" class="form-control" required="" value="{{ $pelanggan->alamat }}">
+                                                <label><Address></Address></label>
+                                                <textarea type="text" name="alamat" class="form-control" required="" value="{{ $pelanggan->alamat }}"></textarea>
                                             </div>
 
                                             <div class="mb-3">

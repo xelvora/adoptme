@@ -57,14 +57,14 @@ class ShopController extends Controller
     public function show($id)
     {
         $shop = Shop::findOrFail($id);
-        return view('shop.show',compact('Shop'));
+        return view('shop.show',compact('shop'));
     }//end method
 
 
     public function edit($id)
     {
         $shop = Shop::findOrFail($id);
-        return view('pelanggan.edit',compact('pelanggan'));
+        return view('shop.edit',compact('shop'));
     }
 
     /**
@@ -87,7 +87,7 @@ class ShopController extends Controller
         ]);
         if($validasi->fails())
         {
-            return redirect()->route('pelanggan.create',[$id])->withErrors($validasi);
+            return redirect()->route('shop.create',[$id])->withErrors($validasi);
         }
         if($request->input('password'))
         {
@@ -99,7 +99,7 @@ class ShopController extends Controller
          }
           $shop->update($data);
           //Alert::toast('Berhasil di edit','success');
-          return redirect()->route('pelanggan.index');
+          return redirect()->route('shop.index');
        }
 }
 
