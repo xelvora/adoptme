@@ -15,10 +15,10 @@ class CreateShopTable extends Migration
     {
         Schema::create('shop', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama',50);
-            $table->string('alamat',300);
-            $table->string('email');
-            $table->string('telpon', 13);
+            $table->string('namashop',50);
+            $table->string('alamatshop',300);
+            $table->string('emailshop');
+            $table->string('fax', 13);
             $table->timestamps();
         });
     }

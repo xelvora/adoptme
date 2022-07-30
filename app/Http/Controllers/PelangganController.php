@@ -16,7 +16,7 @@ class PelangganController extends Controller
         $filterKeyword = $request->get('keyword');
         if ($filterKeyword)
         {
-            $pelanggan = Pelanggan::where('name','LIKE',"%$filterKeyword%")->paginate(1);
+            $pelanggan = Pelanggan::where('nama','LIKE',"%$filterKeyword%")->paginate(1);
         }
         return view('pelanggan.index', compact('pelanggan'));
     }//end method
@@ -33,7 +33,7 @@ class PelangganController extends Controller
         $validasi = Validator::make($data,[
             'nama'=>'required|max:255',
             'alamat'=>'required|max:255',
-            'email'=>'required|email|max:255|unique:pelanggans',
+            'email'=>'required|email|max:255|unique:pelanggan',
             'telpon'=>'required|max:255',
 
         ]);

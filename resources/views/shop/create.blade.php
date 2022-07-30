@@ -18,28 +18,28 @@ Pelanggan
                                         <h4 class="card-title">Add Pelanggan</h4>
 
 
-                                        <form class="custom-validation" method="POST" action="{{ route('pelanggan.store') }}" novalidate="">
+                                        <form class="custom-validation" method="POST" action="{{ route('shop.store') }}" novalidate="">
                                             @csrf
                                             <div class="mb-3">
-                                                <label>Name</label>
-                                                <input type="text" name="nama" class="form-control" required="" placeholder="Silahkan input nama">
+                                                <label>Name Shop</label>
+                                                <input type="text" name="namashop" class="form-control" required="" placeholder="Silahkan input nama">
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>Alamat</label>
-                                                <input type="text" name="alamat" class="form-control" required="" placeholder="Silahkan input alamat">
+                                                <label>Alamat Shop</label>
+                                                <input type="text" name="alamatshop" class="form-control" required="" placeholder="Silahkan input alamat">
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>E-Mail</label>
+                                                <label>E-Mail Shop</label>
                                                 <div>
-                                                    <input type="email" name="email" class="form-control" required="" parsley-type="email" placeholder="Silahkan masukan email yang benar">
+                                                    <input type="email" name="emailshop" class="form-control" required="" parsley-type="email" placeholder="Silahkan masukan email yang benar">
                                                 </div>
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>No. Telpon</label>
-                                                <input type="text" name="telpon" class="form-control" required="" placeholder="Silahkan input nama">
+                                                <label>Fax</label>
+                                                <input type="text" name="fax" class="form-control" required="" placeholder="Silahkan input nama">
                                             </div>
 
 

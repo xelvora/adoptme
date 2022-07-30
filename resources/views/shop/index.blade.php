@@ -43,7 +43,7 @@ Shop
                                                         <th>Nama</th>
                                                         <th>Alamat</th>
                                                         <th>Email</th>
-                                                        <th>No. Telpon</th>
+                                                        <th>Fax</th>
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
@@ -51,13 +51,13 @@ Shop
                  @foreach($shop as $row)
                     <tr>
                         <td>{{ $loop->iteration + ($shop->perpage() *  ($shop->currentPage() -1)) }}</td>
-                        <td>{{ $row->nama }}</td>
-                        <td>{{ $row->alamat }}</td>
-                        <td>{{ $row->email }}</td>
-                        <td>{{ $row->telpon }}</td>
+                        <td>{{ $row->namashop }}</td>
+                        <td>{{ $row->alamatshop }}</td>
+                        <td>{{ $row->emailshop }}</td>
+                        <td>{{ $row->fax }}</td>
 
                         <td>
-                        <form method="post" action="{{ route('user.destroy',[$row->id]) }}" onsubmit="return confirm('Apakah anda yakin akan menghapus, {{$row->name}}?')">
+                        <form method="post" action="{{ route('shop.destroy',[$row->id]) }}" onsubmit="return confirm('Apakah anda yakin akan menghapus, {{$row->namashop}}?')">
                                 @csrf
                             {{ method_field('DELETE') }}
                             <button type="submit" href="{{ route('logout') }}" class="btn btn-outline-secondary btn-sm edit">

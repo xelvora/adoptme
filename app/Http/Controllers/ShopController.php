@@ -16,7 +16,7 @@ class ShopController extends Controller
         $filterKeyword = $request->get('keyword');
         if ($filterKeyword)
         {
-            $shop = Shop::where('name','LIKE',"%$filterKeyword%")->paginate(1);
+            $shop = Shop::where('nama','LIKE',"%$filterKeyword%")->paginate(1);
         }
         return view('shop.index', compact('shop'));
     }//end method
@@ -31,10 +31,10 @@ class ShopController extends Controller
     {
         $data = $request->all();
         $validasi = Validator::make($data,[
-            'nama'=>'required|max:255',
-            'alamat'=>'required|max:255',
-            'email'=>'required|email|max:255|unique:shops',
-            'telpon'=>'required|max:255',
+            'namashop'=>'required|max:255',
+            'alamatshop'=>'required|max:255',
+            'emailshop'=>'required|email|max:255|unique:Shop',
+            'telponshop'=>'required|max:255',
 
         ]);
         if($validasi->fails())
@@ -57,14 +57,14 @@ class ShopController extends Controller
     public function show($id)
     {
         $shop = Shop::findOrFail($id);
-        return view('shop.show',compact('shop'));
+        return view('shop.show',compact('Shop'));
     }//end method
 
 
     public function edit($id)
     {
         $shop = Shop::findOrFail($id);
-        return view('shop.edit',compact('shop'));
+        return view('pelanggan.edit',compact('pelanggan'));
     }
 
     /**
@@ -79,15 +79,15 @@ class ShopController extends Controller
     $shop = Shop::findOrFail($id);
     $data = $request->all();
     $validasi = Validator::make($data,[
-            'nama'=>'required|max:255',
-            'alamat'=>'required|max:255',
+            'namashop'=>'required|max:255',
+            'alamatshop'=>'required|max:255',
             'email'=>'required|email|max:255',
             //'username'=>'required|max:100|unique:users,username,'.$id,
-            'telpon'=>'required|max:255'
+            'fax'=>'required|max:255'
         ]);
         if($validasi->fails())
         {
-            return redirect()->route('shop.create',[$id])->withErrors($validasi);
+            return redirect()->route('pelanggan.create',[$id])->withErrors($validasi);
         }
         if($request->input('password'))
         {
@@ -99,7 +99,7 @@ class ShopController extends Controller
          }
           $shop->update($data);
           //Alert::toast('Berhasil di edit','success');
-          return redirect()->route('shop.index');
+          return redirect()->route('pelanggan.index');
        }
 }
 

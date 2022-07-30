@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Shop extends Model
 {
-    protected $table = 'pelanggan';
+    protected $table = 'shop';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'nama', 'alamat', 'email', 'telpon'
+        'namashop', 'alamatshop', 'emailshop', 'telponshop'
     ];
 }
