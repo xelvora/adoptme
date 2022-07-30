@@ -31,9 +31,9 @@ class HewanController extends Controller
     {
         $data = $request->all();
         $validasi = Validator::make($data,[
-            'nama'=>'required|max:255',
             'jenishewan'=>'required|max:255',
             'ras'=>'required|max:255',
+            'jenis'=>'required|max:255',
             'umur'=>'required|max:255',
 
         ]);
@@ -80,9 +80,9 @@ class HewanController extends Controller
     $hewan = Hewan::findOrFail($id);
     $data = $request->all();
     $validasi = Validator::make($data,[
-        'nama'=>'required|max:255',
         'jenishewan'=>'required|max:255',
         'ras'=>'required|max:255',
+        'jenis'=>'required|max:255',
         'umur'=>'required|max:255',
 
         ]);

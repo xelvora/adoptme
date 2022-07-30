@@ -21,7 +21,7 @@ Hewan
                                             @csrf
                                             <div class="mb-3">
                                                 <label>Jenis Hewan</label>
-                                                <input type="text" name="jenis" class="form-control" required="" placeholder="Silahkan input Jenis Hewan">
+                                                <input type="text" name="jenishewan" class="form-control" required="" placeholder="Silahkan input Jenis Hewan">
                                             </div>
 
                                             <div class="mb-3">

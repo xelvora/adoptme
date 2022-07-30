@@ -34,7 +34,7 @@ class ShopController extends Controller
             'namashop'=>'required|max:255',
             'alamatshop'=>'required|max:255',
             'emailshop'=>'required|email|max:255|unique:Shop',
-            'telponshop'=>'required|max:255',
+            'fax'=>'required|max:255',
 
         ]);
         if($validasi->fails())

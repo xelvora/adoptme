@@ -9,6 +9,6 @@ class Shop extends Model
     protected $table = 'shop';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'namashop', 'alamatshop', 'emailshop', 'telponshop'
+        'namashop', 'alamatshop', 'emailshop', 'fax'
     ];
 }
