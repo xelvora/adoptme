@@ -57,7 +57,7 @@ pelanggan
                         <td>{{ $row->telpon }}</td>
 
                         <td>
-                        <form method="post" action="{{ route('user.destroy',[$row->id]) }}" onsubmit="return confirm('Apakah anda yakin akan menghapus, {{$row->name}}?')">
+                        <form method="post" action="{{ route('pelanggan.destroy',[$row->id]) }}" onsubmit="return confirm('Apakah anda yakin akan menghapus, {{$row->nama}}?')">
                                 @csrf
                             {{ method_field('DELETE') }}
                             <button type="submit" href="{{ route('logout') }}" class="btn btn-outline-secondary btn-sm edit">

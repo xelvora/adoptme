@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('title')
-Edit Pelanggan
+Edit Daftar Hewan
 @endsection
 
 <!-- ini untuk isi home -->
@@ -13,43 +13,38 @@ Edit Pelanggan
 
 
                                 <div class="card">
-<div class="card-body">
-                                        <h4 class="card-title">Edit Pelanggan</h4>
+                                <div class="card-body">
+                                        <h4 class="card-title">Edit Daftar Hewan</h4>
 
 
-                                        <form class="custom-validation" method="POST" action="{{ route('pelanggan.update',[$pelanggan->id]) }}" novalidate="">
+                                        <form class="custom-validation" method="POST" action="{{ route('hewan.update',[$hewan->id]) }}" novalidate="">
                                             @csrf
                                             {{ method_field('PUT') }}
                                             <div class="mb-3">
-                                                <label>Name</label>
-                                                <input type="text" name="nama" class="form-control" required="" value="{{ $pelanggan->nama }}">
+                                                <label>Jenis Hewan</label>
+                                                <input type="text" name="jenishewan" class="form-control" required="" value="{{ $hewan->jenishewan }}">
                                             </div>
 
                                             
                                             <div class="mb-3">
-                                                <label>Alamat</label>
-                                                <input type="text" name="alamat" class="form-control" required="" value="{{ $pelanggan->alamat }}">
+                                                <label>Ras</label>
+                                                <input type="text" name="ras" class="form-control" required="" value="{{ $hewan->ras }}">
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>E-Mail</label>
-                                                <div>
-                                                    <input type="email" name="email" class="form-control" required="" parsley-type="email" value="{{ $pelanggan->email }}">
-                                                </div>
+                                                <label>Jenis Kelamin</label>
+                                                <input type="text" name="jenis" class="form-control" required="" value="{{ $hewan->jenis }}">
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>No. Telpon</label>
-                                                <input type="text" name="telpon" class="form-control" required="" value="{{ $pelanggan->telpon }}">
+                                                <label>Umur</label>
+                                                <input type="text" name="umur" class="form-control" required="" value="{{ $hewan->umur }}">
                                             </div>
 
                                             <div class="mb-0">
                                                 <div>
                                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
                                                        Edit
-                                                    </button>
-                                                    <button type="reset" class="btn btn-secondary waves-effect">
-                                                        Cancel
                                                     </button>
                                                 </div>
                                             </div>
